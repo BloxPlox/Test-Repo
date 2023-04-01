@@ -6,7 +6,7 @@
 
 The CWE that I chose is the use of passwords or a crytographic key in software that is stored in a variable or a parameter. In other words, the passwords/cryptographic key is hard-coded. Hard-coding your credentials makes it so that someone can get around the authentication methods that have been put in place by the system administrator. This security flaw can be difficult to detect and fix, which may result in the software being disabled completely.
 
-AN example of this CWE could be a hard-coded passowrd that checks if the input for the password is correct:
+An example of this CWE could be a hard-coded passowrd that checks if the input for the password is correct:
 
 ```java
 int VerifyUser(String password) {
@@ -19,3 +19,25 @@ int VerifyUser(String password) {
   // If password is correct...
   return(1);
 ```
+
+My experience with this CWE comes from a class I took at Clark State. The class focused around creating a website that utilized a database of products. In order to connect to this database, our credentials were hard-coded in a php file. While this method is convenient for the students, it teaches them bad coding practices. I'm unsure why the instructors taught us to connect to our database this way. Even just not hard-coding the passwords would have been a simple task. 
+
+The php file in question (I omitted the credentials):
+```php
+<?php
+/* The Connection to mysql Database */
+// all the info is on your mysql handout provided to you by the instructor
+// the xxx is your connection data
+$db_host = "some-server-at.clarkstate.edu";
+// your user name
+$db_user = "My username";
+// your password
+$db_pass = "Password stored here";
+// database name 
+$db_dbname = "DATABASE";
+// database port
+$db_port = "1234";
+?>
+```
+
+
