@@ -40,4 +40,4 @@ $db_port = "1234";
 ?>
 ```
 
-
+There's a few ways that this flaw could be mitigated. Storing the user credentials in an encrypted config file would be a good first step. This file would only be on the users system and would never be put in the database. Prompting the user for a password would be another solution. Another way would be to use a secrets manager. But this may cost money and may not be worth it with this class. I think showing students how to use a config file would be the best solution to this security flaw. It'll save money, time, and be more secure than hard-coding the passwords. 
